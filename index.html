@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sharugesh Portfolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f5f3;
+color:#0b132b;
+}
+
+/* NAVBAR */
+
+header{
+display:flex;
+justify-content:flex-end;
+padding:25px 60px;
+}
+
+nav a{
+margin-left:30px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:100px 20px;
+}
+
+.badge{
+display:inline-block;
+background:#e8f5ec;
+color:#2e7d32;
+padding:8px 18px;
+border-radius:25px;
+font-size:14px;
+margin-bottom:20px;
+}
+
+.badge span{
+height:8px;
+width:8px;
+background:#2ecc71;
+display:inline-block;
+border-radius:50%;
+margin-right:8px;
+}
+
+.hero h1{
+font-size:80px;
+font-weight:800;
+letter-spacing:2px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+color:#6c757d;
+max-width:600px;
+margin:auto;
+line-height:1.6;
+margin-bottom:40px;
+}
+
+.btn{
+padding:14px 28px;
+border-radius:30px;
+text-decoration:none;
+margin:10px;
+font-weight:600;
+}
+
+.primary{
+background:#0b132b;
+color:white;
+}
+
+.secondary{
+border:1px solid #ccc;
+color:#333;
+}
+
+/* ABOUT */
+
+.about{
+display:flex;
+justify-content:space-between;
+padding:100px 10%;
+gap:50px;
+animation:fadeIn 2s ease;
+}
+
+.about-left{
+max-width:500px;
+}
+
+.about-left h5{
+letter-spacing:2px;
+color:#888;
+margin-bottom:10px;
+}
+
+.about-left h2{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.about-left p{
+color:#6c757d;
+line-height:1.8;
+}
+
+/* SKILLS */
+
+.skills{
+max-width:500px;
+}
+
+.skill-group{
+margin-bottom:30px;
+}
+
+.skill-title{
+font-size:14px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.tag{
+padding:10px 18px;
+border-radius:25px;
+background:white;
+border:1px solid #ddd;
+font-size:14px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.tag:hover{
+background:#0b132b;
+color:white;
+transform:scale(1.05);
+}
+
+/* PROJECTS */
+
+.portfolio{
+padding:100px 10%;
+text-align:center;
+}
+
+.portfolio h5{
+color:#888;
+margin-bottom:10px;
+}
+
+.portfolio h2{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.portfolio p{
+color:#6c757d;
+margin-bottom:60px;
+}
+
+.project-container{
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.project-card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+width:350px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.project-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.project-info{
+padding:20px;
+text-align:left;
+}
+
+.project-info h3{
+margin-bottom:10px;
+}
+
+.project-info p{
+font-size:14px;
+color:#666;
+}
+
+/* CERTIFICATES */
+
+.certificates{
+padding:100px 10%;
+text-align:center;
+background:#f9f9f9;
+}
+
+.certificates h5{
+color:#888;
+margin-bottom:10px;
+}
+
+.certificates h2{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.certificates p{
+color:#6c757d;
+margin-bottom:50px;
+}
+
+.certificate-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.certificate-card{
+background:white;
+padding:25px;
+border-radius:12px;
+width:320px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.certificate-card:hover{
+transform:translateY(-8px);
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+padding:100px 20px;
+background:white;
+}
+
+.contact h5{
+color:#888;
+margin-bottom:10px;
+}
+
+.contact h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.contact p{
+color:#6c757d;
+margin-bottom:10px;
+}
+
+.contact-info{
+margin-top:20px;
+font-size:18px;
+}
+
+.social-links{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.social-btn{
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+background:#0b132b;
+color:white;
+transition:0.3s;
+}
+
+.social-btn:hover{
+background:#2ecc71;
+transform:translateY(-4px);
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#certificates">Certificates</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+
+<div class="badge">
+<span></span> Available for work
+</div>
+
+<h1>SARUGESH</h1>
+
+<p>
+I craft elegant digital experiences that blend beautiful design with robust engineering.
+</p>
+
+<a href="#projects" class="btn primary">View Work</a>
+<a href="#contact" class="btn secondary">Get in Touch</a>
+
+</section>
+
+<section class="about" id="about">
+
+<div class="about-left">
+
+
+<h2>about me</h2>
+
+<p>
+I am a Computer Science Engineering student passionate about building modern web applications.
+I specialize in creating responsive websites and full-stack applications.
+Recently I developed a secure College Online Voting System using React and Spring Boot.
+</p>
+
+</div>
+
+<div class="skills">
+     <!-- PROGRAMMING -->
+
+    <div class="skill-group">
+        <div class="skill-title">PROGRAMMING</div>
+
+        <div class="tags">
+            <span class="tag">Java</span>
+            <span class="tag">JavaScript</span>
+        </div>
+    </div>
+
+    <!-- FRONTEND -->
+
+    <div class="skill-group">
+        <div class="skill-title">FRONTEND</div>
+
+        <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+        </div>
+    </div>
+
+   
+
+    <!-- BACKEND -->
+
+    <div class="skill-group">
+        <div class="skill-title">BACKEND</div>
+
+        <div class="tags">
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MySQL</span>
+        </div>
+    </div>
+
+    
+
+</div>
+</section>
+
+<section class="portfolio" id="projects">
+
+
+<h2>Selected Work</h2>
+
+<div class="project-container">
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+<div class="project-info">
+<h3>College Online Voting System</h3>
+<p>
+Secure online voting platform where students can vote once using authentication.
+Built with React.js frontend and Spring Boot backend.
+</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+<div class="project-info">
+<h3>E-Commerce Website</h3>
+<p>
+Full-stack online shopping platform with cart system and secure checkout.
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="certificates" id="certificates" style="padding:100px 10%; text-align:center; background:#f9f9f9;">
+
+
+<h2 style="font-size:48px; margin-bottom:20px;">My Certificates</h2>
+
+
+
+<div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
+
+<div onclick="openCert('cert1')" style="background:white; padding:25px; border-radius:12px; width:300px; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+<h3>HTML,CSS,JAVASCRIPT</h3>
+<br>
+<p style="font-size:14px; color:#666;">View certificate</p>
+</div>
+
+<div onclick="openCert('cert2')" style="background:white; padding:25px; border-radius:12px; width:300px; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+<h3>Continuous Integration and Delivery - DevOps</h3>
+<br>
+<p style="font-size:14px; color:#666;">View certificate</p>
+</div>
+
+<div onclick="openCert('cert3')" style="background:white; padding:25px; border-radius:12px; width:300px; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+<h3>Full Stack Internship – Infoview</h3>
+<br>
+<p style="font-size:14px; color:#666;">View certificate</p>
+</div>
+
+</div>
+
+<!-- Certificate Popup -->
+
+<div id="certPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+
+<div style="position:relative; background:white; padding:20px; border-radius:10px; max-width:80%;">
+
+<span onclick="closeCert()" style="position:absolute; top:10px; right:15px; font-size:25px; cursor:pointer;">×</span>
+
+<img id="certImage" src="" style="max-width:100%; height:auto;">
+
+</div>
+
+</div>
+
+<script>
+
+function openCert(cert){
+let img=document.getElementById("certImage");
+
+if(cert==="cert1"){
+img.src="images/Annotation 2026-03-11 113304.png"
+}
+
+if(cert==="cert2"){
+img.src="images/Annotation 2026-03-11 113146.png";
+}
+
+if(cert==="cert3"){
+img.src="internship-certificate.jpg";
+}
+
+document.getElementById("certPopup").style.display="flex";
+}
+
+function closeCert(){
+document.getElementById("certPopup").style.display="none";
+}
+
+</script>
+
+</section>
+
+
+<section class="contact" id="contact" style="text-align:center; padding:100px 20px; background:white;">
+
+    
+    <h2 style="font-size:40px; margin-bottom:20px;">CONTACT</h2>
+
+    <p style="color:#6c757d; margin-bottom:10px;">
+        If you would like to work together or have any questions, feel free to contact me.
+    </p>
+
+    <div class="contact-info" style="margin-top:20px; font-size:18px;">
+        <p><strong>Name:</strong> Sharugesh</p>
+        <p><strong>Email:</strong> sharukesh026@gmail.com</p>
+        <p><strong>Phone:</strong> +91 7538824959</p>
+        <p><strong>Location:</strong> Tamil Nadu, India</p>
+    </div>
+
+    <!-- GitHub & LinkedIn Buttons -->
+    <div class="social-links" style="margin-top:30px; display:flex; justify-content:center; gap:20px;">
+        <a href="https://github.com/sharukesh026-oss" target="_blank" style="
+            padding:12px 25px;
+            border-radius:30px;
+            text-decoration:none;
+            font-weight:600;
+            background:#0b132b;
+            color:white;
+            transition:0.3s;
+            display:inline-block;
+        " 
+        onmouseover="this.style.background='#2ecc71'; this.style.transform='translateY(-4px)';" 
+        onmouseout="this.style.background='#0b132b'; this.style.transform='translateY(0)';"
+        >GitHub</a>
+
+        <a href="https://linkedin.com/in/yourusername" target="_blank" style="
+            padding:12px 25px;
+            border-radius:30px;
+            text-decoration:none;
+            font-weight:600;
+            background:#0b132b;
+            color:white;
+            transition:0.3s;
+            display:inline-block;
+        " 
+        onmouseover="this.style.background='#2ecc71'; this.style.transform='translateY(-4px)';" 
+        onmouseout="this.style.background='#0b132b'; this.style.transform='translateY(0)';"
+        >LinkedIn</a>
+    </div>
+
+</section>
+
+</body>
+</html>
